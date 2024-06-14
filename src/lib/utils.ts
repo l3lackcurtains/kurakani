@@ -12,4 +12,4 @@ export function shortenAddress(address: string) {
 }
 
 // export const SERVER_URL = "http://localhost:5467";
-export const SERVER_URL = "http://34.66.16.235:3200";
+export const SERVER_URL = "http://34.66.16.235:5467";
