@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { SERVER_URL } from "@/lib/utils";
 // @ts-ignore
 import { createCommit, postTemplate } from "alberti-protocol-sdk";
 import axios from "axios";
@@ -73,7 +72,7 @@ export function AddPost({ identity, getPosts }: { identity: any; getPosts: any }
               console.log(commit);
 
               try {
-                await axios.post(`${SERVER_URL}/commit`, commit);
+                await axios.post(`/api/create-commit`, commit);
                 getPosts();
                 setOpen(false);
               } catch (error) {

@@ -5,7 +5,6 @@ import { HeaderBox } from "@/components/Header";
 import { PostCard } from "@/components/PostCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { SERVER_URL } from "@/lib/utils";
 // @ts-ignore
 import { createIdentity } from "alberti-protocol-sdk";
 import axios from "axios";
@@ -25,7 +24,7 @@ export default function Home() {
 
   async function getPosts() {
     try {
-      const response = await axios.get(`${SERVER_URL}/commits/0`);
+      const response = await axios.get(`/api/commits`);
       const uPosts = [];
       for (let i = 0; i < response.data.length; i++) {
         uPosts.push(response.data[i]);
