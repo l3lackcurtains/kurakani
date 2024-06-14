@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { SERVER_URL } from "@/lib/utils";
+// @ts-ignore
 import { createCommit, postTemplate } from "alberti-protocol-sdk";
 import axios from "axios";
 import { useState } from "react";

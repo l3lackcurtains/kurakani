@@ -6,6 +6,7 @@ import { PostCard } from "@/components/PostCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SERVER_URL } from "@/lib/utils";
+// @ts-ignore
 import { createIdentity } from "alberti-protocol-sdk";
 import axios from "axios";
 import { useEffect, useState } from "react";
