@@ -7,7 +7,6 @@ import { shortenAddress } from "@/lib/utils";
 import Image from "next/image";
 
 export function PostCard({ post }: { post: any }) {
-  console.log(post);
   return (
     <Card className="w-[450px] m-auto">
       <CardHeader>

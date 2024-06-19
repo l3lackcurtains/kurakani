@@ -67,9 +67,7 @@ export function AddPost({ identity, getPosts }: { identity: any; getPosts: any }
               post.hashtags = post.hashtag.split(",");
 
               const postxx = postTemplate(post.message, post.hashtags, attachmentsArray);
-              console.log(postxx);
-              const commit = createCommit(identity.privateKey, postxx, "post");
-              console.log(commit);
+              const commit = createCommit(identity.privateKey, postxx, "post", 0);
 
               try {
                 await axios.post(`/api/create-commit`, commit);
